@@ -10,6 +10,7 @@ public class EvenNames {
 
         List<String> evenNames = names.stream()
                 .filter(name -> (names.indexOf(name) + 1) % 2 == 0)
+                .map(name -> names.indexOf(name)+". "+name)
                 .collect(Collectors.toList());
         System.out.println(evenNames);
 

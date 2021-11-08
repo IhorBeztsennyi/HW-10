@@ -11,6 +11,7 @@ public class SortedNames {
 
         List<String> sortedNames = names.stream()
                 .sorted(Comparator.reverseOrder())
+                .map(String::toUpperCase)
                 .collect(Collectors.toList());
         System.out.println(sortedNames);
 
