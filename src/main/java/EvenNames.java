@@ -9,8 +9,8 @@ public class EvenNames {
         final List<String> names = Arrays.asList("Igor", "Yevgen", "Sergiy", "Zoryan", "Oleksandr", "Taras", "Dmytro", "Tetiana", "Olga");
 
         List<String> evenNames = names.stream()
-                .filter(name -> (names.indexOf(name) + 1) % 2 == 0)
-                .map(name -> names.indexOf(name)+". "+name)
+                .filter(name -> (names.indexOf(name)) % 2 == 0)
+                .map(name -> (names.indexOf(name)+1)+". "+name)
                 .collect(Collectors.toList());
         System.out.println(evenNames);
 
